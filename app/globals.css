@@ -1011,6 +1011,35 @@ textarea.field {
 .opt-root .step-body ul li { display: flex; align-items: flex-start; gap: 10px; color: var(--muted); font-size: 0.9rem; }
 .opt-root .step-body ul li::before { content: ""; flex-shrink: 0; margin-top: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
 
+/* brand video */
+.opt-root .video-section { background: var(--black-2); border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border); }
+.opt-root .video-section .section-head { margin-bottom: 40px; }
+.opt-root .video-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--card-border);
+}
+.opt-root .video-media img,
+.opt-root .video-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.5s ease; pointer-events: none; }
+.opt-root .video-media video { opacity: 0; }
+.opt-root .video-media.playing video { opacity: 1; }
+.opt-root .video-media.playing .video-poster { opacity: 0; }
+.opt-root .video-play-btn {
+  position: absolute; bottom: 20px; right: 20px; z-index: 20; isolation: isolate;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: rgba(255,255,255,0.2); backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: background 0.2s; pointer-events: auto;
+}
+.opt-root .video-play-btn:hover { background: rgba(255,255,255,0.32); }
+.opt-root .video-play-btn svg { width: 24px; height: 24px; fill: white; color: white; }
+
 /* console */
 .opt-root .interactive { background: var(--black); border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border); }
 .opt-root .console { display: grid; grid-template-columns: 276px minmax(0,1fr); min-height: 640px; border: 1px solid var(--card-border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); }
