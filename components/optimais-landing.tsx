@@ -394,11 +394,13 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
               <img src="/brand_assets/optimaislabs-video-poster.jpg" alt="Optimais Labs brand film" className="video-poster" loading="lazy" />
               <video
                 ref={heroVideoRef}
-                src="/brand_assets/Optimais_Labs_Brand_Film_10s_sound.mp4"
                 playsInline
                 preload="none"
                 onEnded={() => setVideoPlaying(false)}
-              />
+              >
+                <source src="/brand_assets/Optimais_Labs_Brand_Film_10s_sound.webm" type="video/webm" />
+                <source src="/brand_assets/Optimais_Labs_Brand_Film_10s_sound.mp4" type="video/mp4" />
+              </video>
               <button className="video-play-btn" type="button" onClick={toggleHeroVideo} aria-label={videoPlaying ? "Pause video" : "Play video"}>
                 {videoPlaying ? (
                   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
