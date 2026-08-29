@@ -255,8 +255,8 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
       {/* Header */}
       <header className="site-header">
         <nav className="shell nav">
-          <a className="brand" href="/" aria-label="Optimais">
-            <img src="/brand_assets/optimais_logo_clean.svg" alt="Optimais" />
+          <a className="brand" href="/" aria-label="Optimais Labs">
+            <img src="/brand_assets/optimaislabs.png" alt="Optimais Labs" />
           </a>
           <div className="nav-links" aria-label="Page sections">
             {[["capabilities","Industries"],["innovation","Innovation"],["markets","Markets"],["opportunities","Opportunities"],["insights","Insights"],["careers","Careers"],["deeptech","Deep Tech"],["contact","Contact"]].map(([id, label]) => (
@@ -310,7 +310,7 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
             <div className="hero-content reveal">
               <h1>Intelligent systems for sustainable industrial growth.</h1>
               <p className="hero-copy">
-                Optimais is a research-driven Artificial Intelligence and Robotics Research Laboratory and consulting company dedicated to advancing technology, innovation, and sustainable development. We bring together cutting-edge research, engineering expertise, and strategic advisory services to solve complex challenges across industries and society.
+                Optimais Labs is a research-driven Artificial Intelligence and Robotics Research Laboratory and consulting company dedicated to advancing technology, innovation, and sustainable development. We bring together cutting-edge research, engineering expertise, and strategic advisory services to solve complex challenges across industries and society.
               </p>
               <div className="hero-actions">
                 <a className="button" href="/industries">Explore Industries</a>
@@ -319,7 +319,7 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
             </div>
 
             {/* iPhone mockup */}
-            <div className="iphone-wrap reveal" aria-label="Optimais mobile interface preview">
+            <div className="iphone-wrap reveal" aria-label="Optimais Labs mobile interface preview">
               <div className="iphone">
                 <div className="iphone-notch" />
                 <div className="iphone-topbar">
@@ -367,7 +367,7 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
         </section>
 
         {/* ── APPROACH ── */}
-        <section className="approach" aria-label="Optimais approach">
+        <section className="approach" aria-label="Optimais Labs approach">
           <div className="shell">
             <div className="approach-head reveal">
               <p className="section-label">How we work</p>
@@ -377,7 +377,7 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
               {[
                 { n:"01", h:"Research to deployment", p:"Research outputs and proprietary technologies are shaped into practical products, platforms and services that solve real infrastructure and industrial challenges.", li:["Rigorous R&D foundation for every solution","Rapid prototyping and field validation","IP commercialization and technology transfer"] },
                 { n:"02", h:"Multi-discipline engineering delivery", p:"Project delivery spans infrastructure, industrial, environmental, technological and developmental programs, managed under one integrated team.", li:["Mechanical, electrical, civil and systems engineering","Clean power infrastructure and smart grid integration","Full lifecycle from design through operations"] },
-                { n:"03", h:"Institutional capacity and continuous improvement", p:"Beyond delivery, Optimais builds the institutional structures that sustain impact — training centers, innovation hubs, academies and long-term strategic alliances.", li:["Technical training and applied workshops","Incubation programs and innovation hubs","Strategic alliances and joint ventures"] },
+                { n:"03", h:"Institutional capacity and continuous improvement", p:"Beyond delivery, Optimais Labs builds the institutional structures that sustain impact — training centers, innovation hubs, academies and long-term strategic alliances.", li:["Technical training and applied workshops","Incubation programs and innovation hubs","Strategic alliances and joint ventures"] },
               ].map(s => (
                 <div key={s.n} className="step-card reveal">
                   <div className="step-num">{s.n}</div>
@@ -396,12 +396,12 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
         <section className="interactive" id="workspace">
           <div className="shell">
             <div className="section-head reveal">
-              <div><h2>Explore Optimais without leaving the page.</h2></div>
+              <div><h2>Explore Optimais Labs without leaving the page.</h2></div>
               <p>Use the tabs to open each focus area in place. Detailed services expand as needed, keeping the experience fast, clean and focused.</p>
             </div>
             <div className="console reveal">
               {/* sidebar tabs */}
-              <div className="console-nav" aria-label="Optimais content panels">
+              <div className="console-nav" aria-label="Optimais Labs content panels">
                 <p>Open a focus area</p>
                 {[
                   ["01","capabilities","Industries"],
@@ -428,8 +428,8 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
                   <div className="panel-layout">
                     <div>
                       <p className="kicker">Sectors We Serve</p>
-                      <h2>Industries where Optimais delivers intelligent, lasting impact.</h2>
-                      <p className="panel-lede">From AI-driven platforms and clean energy systems to engineering and advisory, Optimais brings deep technical capability across a wide range of industry verticals.</p>
+                      <h2>Industries where Optimais Labs delivers intelligent, lasting impact.</h2>
+                      <p className="panel-lede">From AI-driven platforms and clean energy systems to engineering and advisory, Optimais Labs brings deep technical capability across a wide range of industry verticals.</p>
                       <div className="accordion">
                         {INDUSTRIES.map((item, idx) => (
                           <div key={item.id} className="accordion-item">
@@ -452,7 +452,7 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
                     </div>
                     <aside className="insight-card">
                       <h3>Industries at a Glance</h3>
-                      <p>From deep tech to energy, Optimais spans the critical industries driving Africa&apos;s sustainable growth.</p>
+                      <p>From deep tech to energy, Optimais Labs spans the critical industries driving Africa&apos;s sustainable growth.</p>
                     </aside>
                   </div>
                 </article>
@@ -463,7 +463,7 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
                     <div>
                       <p className="kicker">R&amp;D and Innovation</p>
                       <h2>Built from research. Delivered at scale.</h2>
-                      <p className="panel-lede">Optimais was founded on the belief that applied research should drive practical solutions. Every solution we build is grounded in research, validated through engineering, and designed to perform in the real world.</p>
+                      <p className="panel-lede">Optimais Labs was founded on the belief that applied research should drive practical solutions. Every solution we build is grounded in research, validated through engineering, and designed to perform in the real world.</p>
                       <div className="accordion">
                         {INNOVATION_ITEMS.map((item, idx) => (
                           <div key={item.label} className="accordion-item">
@@ -492,7 +492,7 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
                     <div>
                       <p className="kicker">Where We Work</p>
                       <h2>Serving public, private and industrial markets globally.</h2>
-                      <p className="panel-lede">Optimais serves a broad range of clients and markets — from governments and public institutions to private enterprises, industrial operators, and community development programmes.</p>
+                      <p className="panel-lede">Optimais Labs serves a broad range of clients and markets — from governments and public institutions to private enterprises, industrial operators, and community development programmes.</p>
                       <div className="market-pills">
                         {["Public Sector & Government","Private Enterprise","Industrial Operations","Community Development","Academic & Research Institutions","International Development"].map(m => (
                           <span key={m}>{m}</span>
@@ -510,7 +510,7 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
                 <article className={`panel${activePanel === "opportunities" ? " active" : ""}`} id="panel-opportunities">
                   <p className="kicker">Scholarships &amp; Grants</p>
                   <h2>Find funding for your academic journey.</h2>
-                  <p className="panel-lede">Optimais curates scholarships, grants, and academic funding opportunities from leading institutions and organisations worldwide.</p>
+                  <p className="panel-lede">Optimais Labs curates scholarships, grants, and academic funding opportunities from leading institutions and organisations worldwide.</p>
 
                   <div className="opportunity-tools">
                     <input className="filter search-bar" type="search" placeholder="Search provider, country, field or title…" value={scholarshipQuery} onChange={e => setScholarshipQuery(e.target.value)} aria-label="Search scholarships" />
@@ -560,7 +560,7 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
                     <div>
                       <p className="kicker">Ideas &amp; Perspectives</p>
                       <h2>Insights from the frontier of technology and innovation.</h2>
-                      <p className="panel-lede">Explore the latest insights, ideas, and perspectives from Optimais.</p>
+                      <p className="panel-lede">Explore the latest insights, ideas, and perspectives from Optimais Labs.</p>
                       <p className="panel-lede" style={{ marginTop: 12 }}>
                         Discover research-driven thinking, emerging deep-tech trends, and innovative solutions shaping the future of business, industry, technology, and society. From artificial intelligence and intelligent systems to energy, infrastructure, manufacturing, and digital transformation, our insights highlight the ideas driving sustainable innovation and long-term impact.
                       </p>
@@ -648,9 +648,9 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
                   <div className="panel-layout">
                     <div>
                       <p className="kicker">Start the Conversation</p>
-                      <h2>Plan, build and operate smarter systems with Optimais.</h2>
+                      <h2>Plan, build and operate smarter systems with Optimais Labs.</h2>
                       <p className="panel-lede">
-                        Bring Optimais into early strategy, feasibility, engineering design, implementation planning or long-term operations for technology, energy and infrastructure programs.
+                        Bring Optimais Labs into early strategy, feasibility, engineering design, implementation planning or long-term operations for technology, energy and infrastructure programs.
                       </p>
                       {contactStatus === "success" ? (
                         <div className="contact-success">
@@ -698,7 +698,7 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
         </section>
 
         {/* ── STATS ── */}
-        <section className="stats" aria-label="Optimais operating breadth">
+        <section className="stats" aria-label="Optimais Labs operating breadth">
           <div className="shell stats-grid">
             {[["6","core capability domains"],["12+","engineering and technology disciplines"],["4","deployment markets: public, private, industrial and communities"],["360°","capability across strategy, engineering, deployment and operations"]].map(([val, label]) => (
               <div key={val} className="stat reveal">
@@ -717,12 +717,12 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
                 <p className="section-label">Schedule</p>
                 <h2>Let&apos;s Work Together</h2>
               </div>
-              <p>Book a strategy call to discuss how Optimais can support your goals in technology, energy, or infrastructure.</p>
+              <p>Book a strategy call to discuss how Optimais Labs can support your goals in technology, energy, or infrastructure.</p>
             </div>
-            <a href="mailto:optimaislabs@gmail.com" className="calendar-bento reveal" aria-label="Book a call with Optimais">
+            <a href="mailto:optimaislabs@gmail.com" className="calendar-bento reveal" aria-label="Book a call with Optimais Labs">
               <div className="cal-left">
                 <h2>Ready to build something exceptional?</h2>
-                <p>Book a 30-minute strategy call — no strings attached. We&apos;ll map out how Optimais can support your mission.</p>
+                <p>Book a 30-minute strategy call — no strings attached. We&apos;ll map out how Optimais Labs can support your mission.</p>
                 <button className="cal-book-btn" type="button">
                   Book a Call <ArrowRight />
                 </button>
@@ -776,7 +776,7 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
               <div className="founder-photo-wrap">
                 <img
                   src="/brand_assets/CEO_image.png"
-                  alt="Ahmed Senior Ismail, Founder and CEO of Optimais"
+                  alt="Ahmed Senior Ismail, Founder and CEO of Optimais Labs"
                   className="founder-photo"
                   loading="lazy"
                   width={300}
@@ -786,11 +786,11 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
               <div className="founder-bio-wrap">
                 <p className="kicker">Ph.D. Candidate · University of New Hampshire</p>
                 <h3 className="founder-name">Ahmed Senior Ismail</h3>
-                <p className="founder-role">Founder &amp; CEO, Optimais</p>
+                <p className="founder-role">Founder &amp; CEO, Optimais Labs</p>
                 <div className="founder-bio">
                   <p>Ahmed Senior Ismail is a Ph.D. Candidate in Integrated Applied Mathematics at the University of New Hampshire, specializing in applied mathematics, machine learning, reinforcement learning, robust optimization, and mathematical optimization. His research focuses on developing risk-sensitive algorithms for decision-making under uncertainty, with applications in finance, operations, autonomous systems, and high-stakes environments.</p>
                   <p>He holds advanced degrees in Mathematical Engineering, Financial Mathematics and Economics, and Mathematics from institutions in the United States, Italy, Poland, and Nigeria. He has also gained international research and industry experience, including high-performance computing work at Capgemini Engineering in France, where he developed neural-network-based surrogate models for mechanical simulations.</p>
-                  <p>Ahmed has served as a teaching assistant in Reinforcement Learning, Machine Learning, Mathematical Optimization, and Engineering Computing. He has presented research internationally and published peer-reviewed work in applied mathematics, thermofluids, and computational modeling. As Founder of Optimais, he brings together research, technology, innovation, and practical problem-solving to support responsible AI, intelligent systems, energy solutions, infrastructure development, and capacity building.</p>
+                  <p>Ahmed has served as a teaching assistant in Reinforcement Learning, Machine Learning, Mathematical Optimization, and Engineering Computing. He has presented research internationally and published peer-reviewed work in applied mathematics, thermofluids, and computational modeling. As Founder of Optimais Labs, he brings together research, technology, innovation, and practical problem-solving to support responsible AI, intelligent systems, energy solutions, infrastructure development, and capacity building.</p>
                 </div>
                 <a href="https://www.linkedin.com/in/ahmed-senior-ismail-4a9569156" target="_blank" rel="noopener noreferrer" className="founder-linkedin" aria-label="Ahmed Senior Ismail on LinkedIn">
                   <svg width={16} height={16} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -837,13 +837,13 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
             <div className="contact-panel reveal">
               <div>
                 <h2>Ready to start your project?</h2>
-                <p>Bring Optimais into your strategy, engineering or operations programme. Reach out to start the conversation.</p>
+                <p>Bring Optimais Labs into your strategy, engineering or operations programme. Reach out to start the conversation.</p>
               </div>
               <button className="button" type="button" onClick={() => openPanel("contact")}>Start a Project</button>
             </div>
             <div className="footer">
-              <span><span className="footer-mark">Optimais</span> — Intelligent Systems. Sustainable Futures.</span>
-              <span>© {new Date().getFullYear()} Optimais. All rights reserved.</span>
+              <span><span className="footer-mark">Optimais Labs</span> — Intelligent Systems. Sustainable Futures.</span>
+              <span>© {new Date().getFullYear()} Optimais Labs. All rights reserved.</span>
             </div>
           </div>
         </section>

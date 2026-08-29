@@ -19,7 +19,7 @@ const NavbarHero: React.FC<NavbarHeroProps> = ({
   heroSubtitle = "Join the community",
   heroDescription = "Discover cutting-edge solutions designed for the modern digital landscape.",
   backgroundImage = "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
-  videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+  videoUrl = "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
   emailPlaceholder = "enter@email.com"
 }) => {
   const [email, setEmail] = useState('');

@@ -151,7 +151,7 @@ export function AuthModal({ open, onClose, initialMode = "signup", initialTab = 
       className="opt-auth-backdrop"
       role="dialog"
       aria-modal="true"
-      aria-label={mode === "signup" ? "Create your account" : "Sign in to Optimais"}
+      aria-label={mode === "signup" ? "Create your account" : "Sign in to Optimais Labs"}
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
       <div className="opt-auth-modal">
@@ -160,7 +160,7 @@ export function AuthModal({ open, onClose, initialMode = "signup", initialTab = 
         {/* logo */}
         <div className="opt-auth-logo-wrap">
           <div className="opt-auth-logo-inner">
-            <img src="/brand_assets/optimais_logo_clean.svg" alt="Optimais" height={32} />
+            <img src="/brand_assets/optimaislabs.png" alt="Optimais Labs" height={32} />
           </div>
         </div>
 
@@ -169,10 +169,10 @@ export function AuthModal({ open, onClose, initialMode = "signup", initialTab = 
         </h2>
         <p className="opt-auth-sub">
           {mode === "signup"
-            ? "Join Optimais — individual or business"
+            ? "Join Optimais Labs — individual or business"
             : mode === "forgot"
             ? "Enter your email and we'll send a reset link"
-            : "Sign in to your Optimais account"}
+            : "Sign in to your Optimais Labs account"}
         </p>
 
         {/* ── SIGN-UP ── */}

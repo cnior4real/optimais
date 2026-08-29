@@ -24,3 +24,5 @@ coverage/
 
 # Temporary files / screenshots
 .tmp/
+.vercel
+.env*

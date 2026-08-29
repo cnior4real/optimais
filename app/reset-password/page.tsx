@@ -42,8 +42,8 @@ function ResetForm() {
     <div className="opt-root">
       <header className="site-header">
         <nav className="shell nav">
-          <Link className="brand" href="/" aria-label="Optimais">
-            <img src="/brand_assets/optimais_logo_clean.svg" alt="Optimais" />
+          <Link className="brand" href="/" aria-label="Optimais Labs">
+            <img src="/brand_assets/optimaislabs.png" alt="Optimais Labs" />
           </Link>
         </nav>
       </header>
@@ -51,7 +51,7 @@ function ResetForm() {
       <main style={{ minHeight: "80vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "40px 20px" }}>
         <div style={{ width: "100%", maxWidth: 420, background: "linear-gradient(135deg,rgba(11,45,74,0.5),rgba(5,21,32,0.8))", border: "1px solid rgba(201,169,97,0.18)", borderRadius: 20, padding: "40px 36px" }}>
           <div style={{ marginBottom: 28, textAlign: "center" }}>
-            <img src="/brand_assets/optimais_logo_clean.svg" alt="Optimais" height={32} />
+            <img src="/brand_assets/optimaislabs.png" alt="Optimais Labs" height={32} />
           </div>
 
           {done ? (

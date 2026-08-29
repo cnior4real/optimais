@@ -27,10 +27,10 @@ export async function POST(req: Request) {
 
   await sendEmail({
     to: email,
-    subject: "Reset your Optimais password",
+    subject: "Reset your Optimais Labs password",
     html: `
       <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:32px;background:#051520;color:#f7f3ea;border-radius:12px;">
-        <h2 style="font-size:1.4rem;margin:0 0 12px;">Reset your Optimais password</h2>
+        <h2 style="font-size:1.4rem;margin:0 0 12px;">Reset your Optimais Labs password</h2>
         <p style="color:rgba(247,243,234,0.7);line-height:1.6;">You requested a password reset. Click the button below to set a new password. This link expires in 1 hour.</p>
         <a href="${resetUrl}" style="display:inline-block;margin:24px 0;padding:14px 28px;background:#c9a961;color:#051520;border-radius:999px;font-weight:800;text-decoration:none;">Reset Password</a>
         <p style="font-size:0.8rem;color:rgba(247,243,234,0.4);">If you didn't request this, ignore this email.</p>

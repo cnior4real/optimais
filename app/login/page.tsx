@@ -10,10 +10,10 @@ export default async function LoginPage({
 
   return (
     <main className="admin-main">
-      <p className="eyebrow">Optimais Account</p>
+      <p className="eyebrow">Optimais Labs Account</p>
       <h1>Sign in</h1>
       {params.registered === "1" && (
-        <p className="status success">Account created. Sign in to access the complete Optimais platform.</p>
+        <p className="status success">Account created. Sign in to access the complete Optimais Labs platform.</p>
       )}
       <Suspense fallback={<p className="status">Loading sign in...</p>}>
         <LoginForm />

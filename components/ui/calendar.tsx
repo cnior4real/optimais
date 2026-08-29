@@ -60,7 +60,7 @@ export function Calendar() {
             Ready to build something exceptional?
           </h2>
           <p className="mb-2 text-sm text-white/60">
-            Book a strategy call to discuss how Optimais can support your goals.
+            Book a strategy call to discuss how Optimais Labs can support your goals.
           </p>
           <Button className="mt-3 rounded-2xl bg-amber-500 hover:bg-amber-400 text-black font-semibold">
             Book a Call

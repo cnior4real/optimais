@@ -14,7 +14,7 @@ export async function POST(request: Request) {
 
   // Notify admin
   await sendEmail({
-    to: "optimaislabs@gmail.com",
+    to: process.env.CONTACT_TO_EMAIL || "optimaislabs.com@gmail.com",
     subject: `New inquiry from ${parsed.data.name}`,
     html: `
       <div style="font-family:sans-serif;max-width:520px;margin:0 auto;padding:32px;background:#051520;color:#f7f3ea;border-radius:12px;">
@@ -29,7 +29,10 @@ export async function POST(request: Request) {
         <p style="margin-top:20px;font-size:0.78rem;color:rgba(247,243,234,0.35);">Submitted via optimaislabs.com · View in admin dashboard</p>
       </div>
     `,
-  }).catch(() => {}); // don't fail the request if email fails
+  }).catch((err) => {
+    // don't fail the request if email fails — the message is already saved to the DB
+    console.error("Failed to send contact notification email:", err);
+  });
 
   return NextResponse.json({ message: "Contact message received.", id: message.id }, { status: 201 });
 }

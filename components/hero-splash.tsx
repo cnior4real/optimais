@@ -93,8 +93,8 @@ export function HeroSplash() {
       {/* Header — logo only */}
       <header className="site-header splash-header">
         <nav className="shell nav">
-          <a className="brand" href="/" aria-label="Optimais">
-            <img src="/brand_assets/optimais_logo_clean.svg" alt="Optimais" />
+          <a className="brand" href="/" aria-label="Optimais Labs">
+            <img src="/brand_assets/optimaislabs.png" alt="Optimais Labs" />
           </a>
           <div className="nav-actions">
             <button
@@ -114,7 +114,7 @@ export function HeroSplash() {
         <div className="shell splash-content">
           <h1>Intelligent systems for<br />sustainable industrial growth.</h1>
           <p className="hero-copy">
-            Optimais is a research-driven Artificial Intelligence and Robotics Research Laboratory and consulting company dedicated to advancing technology, innovation, and sustainable development. We bring together cutting-edge research, engineering expertise, and strategic advisory services to solve complex challenges across industries and society.
+            Optimais Labs is a research-driven Artificial Intelligence and Robotics Research Laboratory and consulting company dedicated to advancing technology, innovation, and sustainable development. We bring together cutting-edge research, engineering expertise, and strategic advisory services to solve complex challenges across industries and society.
           </p>
           <div className="splash-actions">
             <button

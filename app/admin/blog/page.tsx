@@ -4,7 +4,7 @@ export default function AdminBlogPage() {
   return (
     <CrudResource
       title="Blog and insights CMS"
-      description="Create editorial drafts and published Optimais insights."
+      description="Create editorial drafts and published Optimais Labs insights."
       endpoint="/api/blog?admin=true"
       fields={[
         { name: "title", label: "Title", full: true },

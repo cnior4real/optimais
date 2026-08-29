@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Industries | Optimais",
-  description: "Explore the industries and sectors where Optimais delivers intelligent, lasting impact.",
+  title: "Industries | Optimais Labs",
+  description: "Explore the industries and sectors where Optimais Labs delivers intelligent, lasting impact.",
 };
 
 const INDUSTRIES = [
@@ -64,8 +64,8 @@ export default function IndustriesPage() {
     <div className="opt-root industries-page">
       <header className="site-header">
         <nav className="shell nav">
-          <Link className="brand" href="/" aria-label="Optimais">
-            <img src="/brand_assets/optimais_logo_clean.svg" alt="Optimais" />
+          <Link className="brand" href="/" aria-label="Optimais Labs">
+            <img src="/brand_assets/optimaislabs.png" alt="Optimais Labs" />
           </Link>
           <div className="nav-actions" style={{ marginLeft: "auto" }}>
             <Link className="button secondary opt-signin-btn" href="/">Back to Home</Link>
@@ -79,10 +79,10 @@ export default function IndustriesPage() {
           <div className="shell">
             <p className="section-label">Sectors We Serve</p>
             <h1 style={{ fontSize: "clamp(2rem,4vw,3.2rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.1, margin: "16px 0 24px" }}>
-              Industries where Optimais delivers intelligent, lasting impact.
+              Industries where Optimais Labs delivers intelligent, lasting impact.
             </h1>
             <p style={{ maxWidth: 680, fontSize: "1.05rem", lineHeight: 1.75, color: "rgba(255,255,255,0.68)", marginBottom: 0 }}>
-              From AI-driven platforms and autonomous systems to energy infrastructure and strategic advisory, Optimais brings deep technical capability across a wide range of industry verticals.
+              From AI-driven platforms and autonomous systems to energy infrastructure and strategic advisory, Optimais Labs brings deep technical capability across a wide range of industry verticals.
             </p>
           </div>
         </section>
@@ -101,7 +101,7 @@ export default function IndustriesPage() {
 
             <div className="industries-closing">
               <p>
-                At Optimais, we believe that the future belongs to organizations that combine scientific discovery, technological innovation, and practical implementation to create lasting value for businesses, governments, institutions, and society.
+                At Optimais Labs, we believe that the future belongs to organizations that combine scientific discovery, technological innovation, and practical implementation to create lasting value for businesses, governments, institutions, and society.
               </p>
             </div>
           </div>
@@ -113,7 +113,7 @@ export default function IndustriesPage() {
               Ready to work with us?
             </h2>
             <p style={{ color: "rgba(255,255,255,0.6)", marginBottom: 32, maxWidth: 480, margin: "0 auto 32px" }}>
-              Bring Optimais into your strategy, engineering or operations programme.
+              Bring Optimais Labs into your strategy, engineering or operations programme.
             </p>
             <Link className="button" href="/dashboard" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
               Start a Project
@@ -125,10 +125,10 @@ export default function IndustriesPage() {
       <footer style={{ padding: "32px 0", borderTop: "1px solid rgba(201,169,97,0.08)" }}>
         <div className="shell" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
           <span style={{ fontSize: "0.84rem", color: "rgba(255,255,255,0.4)" }}>
-            <strong style={{ color: "rgba(255,255,255,0.7)" }}>Optimais</strong> — Intelligent Systems. Sustainable Futures.
+            <strong style={{ color: "rgba(255,255,255,0.7)" }}>Optimais Labs</strong> — Intelligent Systems. Sustainable Futures.
           </span>
           <span style={{ fontSize: "0.84rem", color: "rgba(255,255,255,0.4)" }}>
-            © {new Date().getFullYear()} Optimais. All rights reserved.
+            © {new Date().getFullYear()} Optimais Labs. All rights reserved.
           </span>
         </div>
       </footer>
