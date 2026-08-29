@@ -1015,30 +1015,17 @@ textarea.field {
 .opt-root .video-section { background: var(--black-2); border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border); }
 .opt-root .video-section .section-head { margin-bottom: 40px; }
 .opt-root .video-media {
-  position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: #000;
   box-shadow: 0 40px 120px rgba(0, 0, 0, 0.6);
   border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
 }
-.opt-root .video-media img,
-.opt-root .video-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.5s ease; pointer-events: none; }
-.opt-root .video-media video { opacity: 0; }
-.opt-root .video-media.playing video { opacity: 1; }
-.opt-root .video-media.playing .video-poster { opacity: 0; }
-.opt-root .video-play-btn {
-  position: absolute; bottom: 20px; right: 20px; z-index: 20; isolation: isolate;
-  width: 56px; height: 56px; border-radius: 50%;
-  background: rgba(255,255,255,0.2); backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.3);
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer; transition: background 0.2s; pointer-events: auto;
-}
-.opt-root .video-play-btn:hover { background: rgba(255,255,255,0.32); }
-.opt-root .video-play-btn svg { width: 24px; height: 24px; fill: white; color: white; }
+/* Plain block-level <video> in normal flow with native controls/poster — no absolute
+   positioning, custom overlay button, or opacity toggling. Those "clever" layering
+   techniques are a known trigger for browsers failing to composite a hardware-decoded
+   video layer correctly (renders solid black while audio keeps playing). */
+.opt-root .video-media video { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); }
 
 /* console */
 .opt-root .interactive { background: var(--black); border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border); }
@@ -1140,18 +1127,6 @@ textarea.field {
 /* dotted surface */
 .opt-root .opt-dotted-surface { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
 .opt-root .opt-dotted-surface canvas { position: absolute; top: 0; left: 0; opacity: 0.45; }
-
-/* video section */
-.opt-root .video-section { border-top: 1px solid rgba(201,169,97,0.1); }
-.opt-root .video-section .section-head { margin-bottom: 40px; }
-.opt-root .video-media { position: relative; width: 100%; aspect-ratio: 16/9; border-radius: var(--radius-lg); overflow: hidden; background: #000; box-shadow: 0 40px 120px rgba(0,0,0,0.6); border: 1px solid rgba(201,169,97,0.1); }
-.opt-root .video-media img, .opt-root .video-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.5s ease; pointer-events: none; }
-.opt-root .video-media video { opacity: 0; }
-.opt-root .video-media.playing video { opacity: 1; }
-.opt-root .video-media.playing .video-poster { opacity: 0; }
-.opt-root .video-play-btn { position: absolute; bottom: 20px; right: 20px; z-index: 20; width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,0.2); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.3); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s; }
-.opt-root .video-play-btn:hover { background: rgba(255,255,255,0.32); }
-.opt-root .video-play-btn svg { width: 24px; height: 24px; fill: white; }
 
 /* calendar */
 .opt-root .calendar-section { border-top: 1px solid rgba(201,169,97,0.1); }

@@ -1483,65 +1483,24 @@
       .video-section .section-head { margin-bottom: 40px; }
 
       .video-media {
-        position: relative;
         width: 100%;
         aspect-ratio: 16 / 9;
-        border-radius: var(--radius-lg);
-        overflow: hidden;
-        background: #000;
         box-shadow: 0 40px 120px rgba(0, 0, 0, 0.6);
         border: 1px solid rgba(201, 169, 97, 0.1);
+        border-radius: var(--radius-lg);
       }
 
-      .video-media img,
+      /* Plain block-level <video> in normal flow with native controls/poster — no absolute
+         positioning, custom overlay button, or opacity toggling. Those "clever" layering
+         techniques are a known trigger for browsers failing to composite a hardware-decoded
+         video layer correctly (renders solid black while audio keeps playing). */
       .video-media video {
-        position: absolute;
-        inset: 0;
+        display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: opacity 0.5s ease;
-        pointer-events: none;
+        border-radius: var(--radius-lg);
       }
-
-      .video-media video { opacity: 0; }
-      .video-media.playing video { opacity: 1; }
-      .video-media.playing .video-poster { opacity: 0; }
-
-      .video-play-btn {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        z-index: 20;
-        isolation: isolate;
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: background 0.2s;
-      }
-
-      .video-play-btn:hover { background: rgba(255, 255, 255, 0.32); }
-
-      .video-play-btn svg {
-        width: 24px;
-        height: 24px;
-        fill: white;
-        color: white;
-      }
-
-      .video-play-btn .icon-play { display: block; }
-      .video-play-btn .icon-pause { display: none; }
-      .video-media.playing .video-play-btn .icon-play { display: none; }
-      .video-media.playing .video-play-btn .icon-pause { display: block; }
-      .video-media.paused .video-play-btn .icon-play { display: block; }
-      .video-media.paused .video-play-btn .icon-pause { display: none; }
 
       /* ─── CALENDAR ─── */
       .calendar-section { border-top: 1px solid rgba(201, 169, 97, 0.1); }
@@ -2190,25 +2149,16 @@
               </div>
               <p>See how Optimais Labs brings together intelligent systems, renewable energy, and engineering excellence into practical, scalable outcomes.</p>
             </div>
-            <div class="video-media reveal" id="videoBlock">
-              <img
-                src="brand_assets/optimaislabs-video-poster.jpg"
-                alt="Optimais Labs brand film"
-                class="video-poster"
-                loading="lazy"
-              />
+            <div class="video-media reveal">
               <video
-                id="heroVideo"
+                controls
                 playsinline
                 preload="none"
+                poster="brand_assets/optimaislabs-video-poster.jpg"
               >
                 <source src="brand_assets/Optimais_Labs_Brand_Film_10s_sound.webm" type="video/webm" />
                 <source src="brand_assets/Optimais_Labs_Brand_Film_10s_sound.mp4" type="video/mp4" />
               </video>
-              <button class="video-play-btn" id="videoPlayBtn" aria-label="Play video">
-                <svg class="icon-play" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
-                <svg class="icon-pause" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-              </button>
             </div>
           </div>
         </section>
@@ -3369,43 +3319,6 @@
         }
       }());
 
-      /* ─── VIDEO PLAYER ─── */
-      (function () {
-        const videoBlock = document.getElementById("videoBlock");
-        const heroVideo = document.getElementById("heroVideo");
-        const videoPlayBtn = document.getElementById("videoPlayBtn");
-
-        if (!videoBlock || !heroVideo || !videoPlayBtn) return;
-
-        function setPlaying(active) {
-          videoBlock.classList.toggle("playing", active);
-          videoBlock.classList.toggle("paused", !active && heroVideo.currentTime > 0);
-        }
-
-        videoPlayBtn.addEventListener("click", function () {
-          if (heroVideo.paused || heroVideo.ended) {
-            var promise = heroVideo.play();
-            if (promise !== undefined) {
-              promise.then(function () {
-                setPlaying(true);
-              }).catch(function () {
-                setPlaying(false);
-              });
-            } else {
-              setPlaying(true);
-            }
-          } else {
-            heroVideo.pause();
-            setPlaying(false);
-          }
-        });
-
-        heroVideo.addEventListener("playing", function () { setPlaying(true); });
-        heroVideo.addEventListener("pause",   function () { setPlaying(false); });
-        heroVideo.addEventListener("ended",   function () {
-          videoBlock.classList.remove("playing", "paused");
-        });
-      }());
     </script>
   </body>
 </html>

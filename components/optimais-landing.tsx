@@ -75,20 +75,6 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [avatarDropdownOpen, setAvatarDropdownOpen] = useState(false);
 
-  /* ── brand video ── */
-  const heroVideoRef = useRef<HTMLVideoElement>(null);
-  const [videoPlaying, setVideoPlaying] = useState(false);
-  const toggleHeroVideo = useCallback(() => {
-    const video = heroVideoRef.current;
-    if (!video) return;
-    if (video.paused || video.ended) {
-      video.play().then(() => setVideoPlaying(true)).catch(() => setVideoPlaying(false));
-    } else {
-      video.pause();
-      setVideoPlaying(false);
-    }
-  }, []);
-
   /* ── auth modal ── */
   const [authModal, setAuthModal] = useState<{
     open: boolean;
@@ -390,24 +376,16 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
               </div>
               <p>See how Optimais Labs brings together intelligent systems, renewable energy, and engineering excellence into practical, scalable outcomes.</p>
             </div>
-            <div className={`video-media reveal${videoPlaying ? " playing" : ""}`}>
-              <img src="/brand_assets/optimaislabs-video-poster.jpg" alt="Optimais Labs brand film" className="video-poster" loading="lazy" />
+            <div className="video-media reveal">
               <video
-                ref={heroVideoRef}
+                controls
                 playsInline
                 preload="none"
-                onEnded={() => setVideoPlaying(false)}
+                poster="/brand_assets/optimaislabs-video-poster.jpg"
               >
                 <source src="/brand_assets/Optimais_Labs_Brand_Film_10s_sound.webm" type="video/webm" />
                 <source src="/brand_assets/Optimais_Labs_Brand_Film_10s_sound.mp4" type="video/mp4" />
               </video>
-              <button className="video-play-btn" type="button" onClick={toggleHeroVideo} aria-label={videoPlaying ? "Pause video" : "Play video"}>
-                {videoPlaying ? (
-                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-                ) : (
-                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
-                )}
-              </button>
             </div>
           </div>
         </section>
