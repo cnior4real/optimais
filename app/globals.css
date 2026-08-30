@@ -1152,18 +1152,6 @@ textarea.field {
 .opt-root .cal-cell.today { border: 1px solid var(--gold); color: var(--gold); font-weight: 700; }
 .opt-root .cal-cell.selected { background: var(--navy-mid); color: var(--white); font-weight: 700; }
 
-/* founder */
-.opt-root .founder-section { border-top: 1px solid rgba(201,169,97,0.1); }
-.opt-root .founder-card { display: grid; grid-template-columns: 300px 1fr; gap: 60px; align-items: start; padding: clamp(44px,6vw,80px); border: 1px solid rgba(201,169,97,0.13); border-radius: var(--radius-lg); background: linear-gradient(135deg, rgba(11,45,74,0.28) 0%, rgba(5,21,32,0.35) 100%); }
-.opt-root .founder-photo-wrap { position: sticky; top: 100px; }
-.opt-root .founder-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center 8%; border-radius: var(--radius); border: 1px solid rgba(201,169,97,0.18); }
-.opt-root .founder-name { margin: 16px 0 2px; font-size: clamp(1.7rem,2.8vw,2.6rem); font-weight: 800; letter-spacing: -0.6px; color: var(--white); }
-.opt-root .founder-role { margin: 0 0 32px; color: var(--gold); font-size: 0.88rem; font-weight: 600; letter-spacing: 0.4px; }
-.opt-root .founder-bio { color: var(--muted-2); font-size: 0.97rem; line-height: 1.82; }
-.opt-root .founder-bio p { margin: 0 0 18px; }
-.opt-root .founder-bio p:last-child { margin-bottom: 0; }
-.opt-root .founder-linkedin { display: inline-flex; align-items: center; gap: 9px; margin-top: 32px; padding: 10px 22px; border: 1px solid rgba(201,169,97,0.38); border-radius: 999px; background: rgba(201,169,97,0.08); color: var(--gold-light); font-size: 0.83rem; font-weight: 600; letter-spacing: 0.3px; transition: background 0.2s, border-color 0.2s; }
-.opt-root .founder-linkedin:hover { background: rgba(201,169,97,0.17); border-color: rgba(201,169,97,0.6); }
 
 /* career / deep tech links */
 .opt-root .career-links { display: flex; flex-direction: column; gap: 4px; margin-top: 8px; }
@@ -1181,9 +1169,7 @@ textarea.field {
   .opt-root .hamburger { display: inline-flex; }
   .opt-root .hero { min-height: auto; }
   .opt-root .hero .shell, .opt-root .section-head, .opt-root .contact-panel,
-  .opt-root .console, .opt-root .panel-layout, .opt-root .founder-card { grid-template-columns: 1fr; }
-  .opt-root .founder-photo-wrap { position: static; }
-  .opt-root .founder-photo { max-width: 260px; }
+  .opt-root .console, .opt-root .panel-layout { grid-template-columns: 1fr; }
   .opt-root .console { min-height: 0; }
   .opt-root .console-nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; border-right: none; border-bottom: 1px solid var(--card-border); }
   .opt-root .console-nav p { grid-column: 1 / -1; margin-bottom: 4px; }
@@ -1211,7 +1197,6 @@ textarea.field {
   .opt-root .accordion-panel p { padding: 0 14px 16px 64px; }
   .opt-root .stat { border-right: 0; border-bottom: 1px solid var(--card-border); }
   .opt-root .stat:last-child { border-bottom: 0; }
-  .opt-root .founder-photo { max-width: 200px; }
   .opt-root .step-card { grid-template-columns: 1fr; gap: 8px; }
   .opt-root .step-num { font-size: 1.8rem; opacity: 0.4; }
   .opt-root .iphone { width: 240px; height: 490px; }

@@ -787,44 +787,6 @@ export function OptimaisLanding({ isAuthenticated = false, initials = "OU" }: Op
           </div>
         </section>
 
-        {/* ── FOUNDER ── */}
-        <section className="founder-section">
-          <div className="shell">
-            <div className="section-head reveal">
-              <div>
-                <p className="section-label">Leadership</p>
-                <h2>Founder &amp; CEO</h2>
-              </div>
-            </div>
-            <div className="founder-card reveal">
-              <div className="founder-photo-wrap">
-                <img
-                  src="/brand_assets/CEO_image.png"
-                  alt="Ahmed Senior Ismail, Founder and CEO of Optimais Labs"
-                  className="founder-photo"
-                  loading="lazy"
-                  width={300}
-                  height={400}
-                />
-              </div>
-              <div className="founder-bio-wrap">
-                <p className="kicker">Ph.D. Candidate · University of New Hampshire</p>
-                <h3 className="founder-name">Ahmed Senior Ismail</h3>
-                <p className="founder-role">Founder &amp; CEO, Optimais Labs</p>
-                <div className="founder-bio">
-                  <p>Ahmed Senior Ismail is a Ph.D. Candidate in Integrated Applied Mathematics at the University of New Hampshire, specializing in applied mathematics, machine learning, reinforcement learning, robust optimization, and mathematical optimization. His research focuses on developing risk-sensitive algorithms for decision-making under uncertainty, with applications in finance, operations, autonomous systems, and high-stakes environments.</p>
-                  <p>He holds advanced degrees in Mathematical Engineering, Financial Mathematics and Economics, and Mathematics from institutions in the United States, Italy, Poland, and Nigeria. He has also gained international research and industry experience, including high-performance computing work at Capgemini Engineering in France, where he developed neural-network-based surrogate models for mechanical simulations.</p>
-                  <p>Ahmed has served as a teaching assistant in Reinforcement Learning, Machine Learning, Mathematical Optimization, and Engineering Computing. He has presented research internationally and published peer-reviewed work in applied mathematics, thermofluids, and computational modeling. As Founder of Optimais Labs, he brings together research, technology, innovation, and practical problem-solving to support responsible AI, intelligent systems, energy solutions, infrastructure development, and capacity building.</p>
-                </div>
-                <a href="https://www.linkedin.com/in/ahmed-senior-ismail-4a9569156" target="_blank" rel="noopener noreferrer" className="founder-linkedin" aria-label="Ahmed Senior Ismail on LinkedIn">
-                  <svg width={16} height={16} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                  LinkedIn Profile
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* ── LOCATIONS ── */}
         <section style={{ padding: "80px 0", borderTop: "1px solid rgba(201,169,97,0.1)" }}>
           <div className="shell">
